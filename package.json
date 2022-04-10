@@ -1,0 +1,19 @@
+{
+  "name": "nasa",
+  "version": "1.0.0",
+  "description": "Landing con la API REST de la NASA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gaizka79/NASA.git"
+  },
+  "author": "Gaizka",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Gaizka79/NASA/issues"
+  },
+  "homepage": "https://github.com/Gaizka79/NASA#readme"
+}
