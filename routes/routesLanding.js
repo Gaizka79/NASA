@@ -1,18 +1,16 @@
 const express = require("express");
 const routerLanding = express.Router();
-const landingControllers = require('../controllers/landingControllers');
+const { getMeteosByMinMass, getMeteosByMass, getMeteosByClass, deleteMeteos, postMeteos, putMeteos } = require("../controllers/landingControllers");
+//const landingControllers = require('../controllers/landingControllers');
+const checkDate = require('../middlewares/checkMass');
 
-//router.route('/api')
-  //  .get(controllers.getIndex);
-//router.get('/api', controllers.getIndex);
-routerLanding.get('/', landingControllers.getMeteoritos);
-routerLanding.get('/astronomy/landings');
-routerLanding.get('/astronomy/landings/mass');
-routerLanding.get('/astronomy/landings/class');
-routerLanding.get('/astronomy/create');
-
-    
-
-
+//routerLanding.get('/', getMeteosByMinMass);
+//routerLanding.get('/astronomy/landings/:minimum_mass?', checkDate, landingControllers.getMeteosByMinMass);
+routerLanding.get('/astronomy/landings', checkDate, getMeteosByMinMass);
+routerLanding.get('/astronomy/landings/mass/:mass', getMeteosByMass);
+routerLanding.get('/astronomy/landings/class/:class', getMeteosByClass);
+routerLanding.post('/astronomy/create', postMeteos);
+routerLanding.put('/astronomy/landings/edit', putMeteos);
+routerLanding.delete('/astronomy/landings/delete', deleteMeteos);//625de493b05ddb38f2f7046c
 
 module.exports = routerLanding;
