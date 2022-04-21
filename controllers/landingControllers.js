@@ -3,7 +3,6 @@ const fetch = require('node-fetch');
 const db = require('../utils/mongoConfig');
 const landings = require('../models/landings');
 const checkDate = require('../middlewares/checkMass');
-const queryMass = require('../middlewares/checkMass');
 const getByFecha = require('../utils/getByData');
 const API_NASA = process.env.API_NASA;
 
@@ -46,7 +45,7 @@ const getMeteosByClass = async (req, res) => {
         .then((xClass) => res.status(200).send(xClass))
         .catch((err) => res.status(400).send(err));
 };
-
+    
 const postMeteos = async (req, res) => {
     try {
         const newLanding = new landings(req.body);
