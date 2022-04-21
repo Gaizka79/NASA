@@ -3,7 +3,6 @@ const fetch = require('node-fetch');
 const db = require('../utils/mongoConfig');
 const landings = require('../models/landings');
 const checkDate = require('../middlewares/checkMass');
-const queryMass = require('../middlewares/checkMass');
 const getByFecha = require('../utils/getByData');
 const API_NASA = process.env.API_NASA;
 
