@@ -14,7 +14,7 @@ const getByFromTo = async (fechas, res) => {
     let arrayFechas = [],
         query = {};
     let from, to;
-    /*if (fechas.from && fechas.to) {
+    /*if (fechas.from && fechas.to) {   
         from = fechas.from;
         to = fechas.to;
     } else if (fechas.from && !fechas.to) {

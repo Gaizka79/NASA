@@ -3,7 +3,7 @@ const checkDate = require('../middlewares/checkMass');
 const db = require('../utils/mongoConfig'),
     neas = require('../models/neas');
     const getNeasByFecha = require('../utils/getByDataNeas');
-//const neas = require('../models/neas');
+//const neas = require('../models/neas'); 
 
 const getIndexNeas = (req, res) => {
     const query = { orbit_class: 'Apollo' };

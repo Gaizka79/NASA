@@ -45,7 +45,7 @@ const getMeteosByClass = async (req, res) => {
         .then((xClass) => res.status(200).send(xClass))
         .catch((err) => res.status(400).send(err));
 };
-
+    
 const postMeteos = async (req, res) => {
     try {
         const newLanding = new landings(req.body);
