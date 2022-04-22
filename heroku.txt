@@ -1,0 +1,77 @@
+gaizka@PcGaizka:~/Documentos/Bootcamp/Backend/NASA$ heroku create
+Creating app... ⣾ 
+(node:24956) SyntaxError Plugin: heroku: /home/gaizka/.local/share/heroku/config.json: Unexpected end of JSON input
+module: @oclif/config@1.18.3
+task: runHook prerun
+plugin: heroku
+root: /snap/heroku/4092
+See more details with DEBUG=*
+Creating app... done, ⬢ blooming-journey-66531
+https://blooming-journey-66531.herokuapp.com/ | https://git.heroku.com/blooming-journey-66531.git
+gaizka@PcGaizka:~/Documentos/Bootcamp/Backend/NASA$ git push heroku master
+error: src refspec master no concuerda con ninguno
+error: falló el push de algunas referencias a 'https://git.heroku.com/blooming-journey-66531.git'
+gaizka@PcGaizka:~/Documentos/Bootcamp/Backend/NASA$ git push heroku main
+Enumerando objetos: 8, listo.
+Contando objetos: 100% (8/8), listo.
+Compresión delta usando hasta 2 hilos
+Comprimiendo objetos: 100% (7/7), listo.
+Escribiendo objetos: 100% (8/8), 2.03 KiB | 519.00 KiB/s, listo.
+Total 8 (delta 1), reusado 0 (delta 0)
+remote: Compressing source files... done.
+remote: Building source:
+remote: 
+remote: -----> Building on the Heroku-20 stack
+remote: -----> Determining which buildpack to use for this app
+remote: -----> Node.js app detected
+remote:        
+remote: -----> Creating runtime environment
+remote:        
+remote:        NPM_CONFIG_LOGLEVEL=error
+remote:        NODE_VERBOSE=false
+remote:        NODE_ENV=production
+remote:        NODE_MODULES_CACHE=true
+remote:        
+remote: -----> Installing binaries
+remote:        engines.node (package.json):  unspecified
+remote:        engines.npm (package.json):   unspecified (use default)
+remote:        
+remote:        Resolving node version 16.x...
+remote:        Downloading and installing node 16.14.2...
+remote:        Using default npm version: 8.5.0
+remote:        
+remote: -----> Installing dependencies
+remote:        Installing node modules
+remote:        
+remote:        up to date, audited 1 package in 207ms
+remote:        
+remote:        found 0 vulnerabilities
+remote:        
+remote: -----> Build
+remote:        
+remote: -----> Caching build
+remote:        - node_modules (nothing to cache)
+remote:        
+remote: -----> Pruning devDependencies
+remote:        
+remote:        up to date, audited 1 package in 200ms
+remote:        
+remote:        found 0 vulnerabilities
+remote:        
+remote: -----> Build succeeded!
+remote:  !     This app may not specify any way to start a node process
+remote:        https://devcenter.heroku.com/articles/nodejs-support#default-web-process-type
+remote: 
+remote: -----> Discovering process types
+remote:        Procfile declares types     -> (none)
+remote:        Default types for buildpack -> web
+remote: 
+remote: -----> Compressing...
+remote:        Done: 31.5M
+remote: -----> Launching...
+remote:        Released v3
+remote:        https://blooming-journey-66531.herokuapp.com/ deployed to Heroku
+remote: 
+remote: Verifying deploy... done.
+To https://git.heroku.com/blooming-journey-66531.git
+ * [new branch]      main -> main

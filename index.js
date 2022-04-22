@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+var helmet = require('helmet');
 const morgan = require('./middlewares/morganConfig');
 const checkDate = require('./middlewares/checkMass');
 const checkDateNeas = require('./middlewares/checkNeas');
@@ -9,6 +10,9 @@ const routerNeas = require('./routes/routesNeas');
 const app = express();
 const PORT = process.env.LOCAL_PORT || 5000;
 //const PORT = 8080;     
+
+app.use(helmet());
+app.disable('x-powered-by');
 
 app.use(morgan(':date[clf] :method :referrer :host :status :param[id] - :response-time ms :body'));
 
